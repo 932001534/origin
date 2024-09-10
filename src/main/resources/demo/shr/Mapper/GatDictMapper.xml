@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.shr.Mapper.GatDictMapper">
+    <select id="select" resultType="demo.shr.pojo.GatDict">
+        select code,item1 from sys_dict where dic_name =#{dicname};
+    </select>
+    <select id="selectgatajlb" resultType="demo.shr.pojo.GatDict">
+        select gatcode,gatvalue from gat_check_common_dict where dic_name ='违法性质_公安厅' and sqcode is null;
+    </select>
+    <update id = "updategatdict" parameterType="demo.shr.pojo.GatDict">
+        UPDATE gat_check_common_dict
+        <set>
+            <if test="sqcode != null">
+                sqcode = #{sqcode},
+            </if>
+            <if test="sqvalue != null">
+                sqvalue = #{sqvalue},
+            </if>
+        </set>
+        WHERE gatcode = #{gatcode}
+    </update>
+</mapper>
