@@ -2,7 +2,9 @@ package demo.shr.Mapper;
 
 import demo.shr.pojo.GatDict;
 
+import demo.shr.pojo.sysdict;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.awt.print.Book;
 import java.util.List;
@@ -15,4 +17,5 @@ import java.util.List;
 public interface GatDictMapper {
     List<GatDict> selectgatajlb();
     public int updategatdict(GatDict gatDict);
+    List<GatDict> selectlike(@Param("name") String dicname);
 }

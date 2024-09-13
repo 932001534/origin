@@ -1,6 +1,7 @@
 package demo.shr.service;
 
 import demo.shr.pojo.GatDict;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -11,4 +12,6 @@ import java.util.List;
 public interface GatDictService {
     public List<GatDict> selectgatajlb();
     public boolean updategatdict(GatDict gatDict);
+    List<GatDict> selectlike(String dicname);
+
 }

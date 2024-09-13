@@ -10,4 +10,5 @@ import java.util.List;
  */
 public interface SysDictService {
     public List<sysdict> selectdict();
+    List<sysdict> select(String dicname);
 }

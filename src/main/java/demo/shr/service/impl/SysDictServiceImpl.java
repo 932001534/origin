@@ -19,4 +19,10 @@ public class SysDictServiceImpl implements SysDictService {
          List<sysdict> sysdicts = sysDictMapper.selectajlb();
          return sysdicts;
      }
+
+    @Override
+    public List<sysdict> select(String dicname) {
+        List<sysdict> sysdicts = sysDictMapper.select(dicname);
+        return sysdicts;
+    }
 }

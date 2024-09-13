@@ -41,4 +41,14 @@ public class GatDict {
     public void setGatvalue(String gatvalue) {
         this.gatvalue = gatvalue;
     }
+
+    @Override
+    public String toString() {
+        return "GatDict{" +
+                "gatcode='" + gatcode + '\'' +
+                ", gatvalue='" + gatvalue + '\'' +
+                ", sqcode='" + sqcode + '\'' +
+                ", sqvalue='" + sqvalue + '\'' +
+                '}';
+    }
 }

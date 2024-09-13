@@ -7,7 +7,12 @@
         select code,item1 from sys_dict where dic_name =#{dicname};
     </select>
     <select id="selectgatajlb" resultType="demo.shr.pojo.GatDict">
-        select gatcode,gatvalue from gat_check_common_dict where dic_name ='违法性质_公安厅' and sqcode is null;
+        select gatcode,gatvalue from gat_check_common_dict where dic_name ='文化程度_公安厅' and sqcode is null;
+    </select>
+
+    <select id="selectlike" parameterType="string" resultType="demo.shr.pojo.GatDict">
+        SELECT * FROM gat_check_common_dict
+        WHERE dic_name LIKE CONCAT('%', #{name}, '%\_公安厅') ESCAPE '\'
     </select>
     <update id = "updategatdict" parameterType="demo.shr.pojo.GatDict">
         UPDATE gat_check_common_dict

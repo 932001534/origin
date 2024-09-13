@@ -23,5 +23,13 @@ public class GatDictServiceImpl implements GatDictService {
     }
     public boolean updategatdict(GatDict gatDict){
         return gatDictMapper.updategatdict(gatDict) > 0;
-    };
+    }
+
+    @Override
+    public List<GatDict> selectlike(String dicname) {
+        List<GatDict> gatDicts = gatDictMapper.selectlike(dicname);
+        return gatDicts;
+    }
+
+    ;
 }

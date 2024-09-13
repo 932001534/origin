@@ -7,6 +7,6 @@
         select code,item1 from sys_dict where dic_name =#{dicname} and flag = '1';
     </select>
     <select id="selectajlb" resultType="demo.shr.pojo.sysdict">
-        select code,item1 from sys_dict where dic_name ='违法性质' and flag = '1';
+        select code,item1 from sys_dict where dic_name ='文化程度' and flag = '1';
     </select>
 </mapper>

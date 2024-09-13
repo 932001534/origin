@@ -12,5 +12,6 @@ import java.util.List;
 @Mapper
 public interface SysDictMapper {
     List<sysdict> select(String dicname);
+
     List<sysdict> selectajlb();
 }
