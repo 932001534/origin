@@ -1,9 +1,9 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://127.0.0.1:5432/gt?useSSL=false&useServerPrepStmts=true&serverTimezone=UTC
+    url: jdbc:postgresql://127.0.0.1:3433/gt?useSSL=false&useServerPrepStmts=true&serverTimezone=UTC
     username: postgres
-    password: postgres
+    password: shr159487
     type: com.alibaba.druid.pool.DruidDataSource
 mybatis:
   mapper-locations: classpath:Mapper/*.xml
